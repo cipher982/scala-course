@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\david\Documents\github\scala-course\recfun\src\main\scala\recfun\RecFun.scala:41:7: ';' expected but 'else' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      else[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\david\Documents\github\scala-course\recfun\src\main\scala\recfun\RecFun.scala:44:9: ';' expected but 'else' found.[0m
+[0m[[0m[31merror[0m] [0m[0m        else[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

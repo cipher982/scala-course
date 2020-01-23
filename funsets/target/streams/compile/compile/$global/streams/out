@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\david\Documents\github\scala-course\funsets\src\main\scala\funsets\FunSets.scala:39:46: not found: value x[0m
+[0m[[0m[31merror[0m] [0m[0m  def diff(s: FunSet, t: FunSet): FunSet = s(x) && !t(x)[0m
+[0m[[0m[31merror[0m] [0m[0m                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\david\Documents\github\scala-course\funsets\src\main\scala\funsets\FunSets.scala:39:55: not found: value x[0m
+[0m[[0m[31merror[0m] [0m[0m  def diff(s: FunSet, t: FunSet): FunSet = s(x) && !t(x)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
