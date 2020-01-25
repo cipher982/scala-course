@@ -5,62 +5,65 @@
 [0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(objsets.TweetSetSuite, sbt.ForkMain$AnnotatedFingerscan@6152c4fe, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
 [0m[[0m[0minfo[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36mfilter: a on set5[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31mfilter: a on set5[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.146 sec[0m
+[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31mfilter: a on set5[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.15 sec[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
+[0m[[0m[31merror[0m] [0m[0m    at objsets.NonEmpty.filterAcc(TweetSet.scala:127)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSet.filter(TweetSet.scala:44)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite$$anon$2.this([35mTweetSetSuite.scala[0m:[33m33[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite.filter: a on set5([35mTweetSetSuite.scala[0m:[33m32[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36mfilter: a on set5[0m finished, took 0.152 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36mfilter: a on set5[0m finished, took 0.155 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36mfilter: on empty set[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31mfilter: on empty set[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.003 sec[0m
+[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31mfilter: on empty set[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.032 sec[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
+[0m[[0m[31merror[0m] [0m[0m    at objsets.Empty.filterAcc(TweetSet.scala:110)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSet.filter(TweetSet.scala:44)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite$$anon$1.this([35mTweetSetSuite.scala[0m:[33m28[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite.filter: on empty set([35mTweetSetSuite.scala[0m:[33m27[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36mfilter: on empty set[0m finished, took 0.004 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36mfilter: on empty set[0m finished, took 0.034 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36munion: set4c and set4d[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31munion: set4c and set4d[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.002 sec[0m
+[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31munion: set4c and set4d[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.021 sec[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSet.union(TweetSet.scala:57)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite$$anon$4.this([35mTweetSetSuite.scala[0m:[33m43[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite.union: set4c and set4d([35mTweetSetSuite.scala[0m:[33m42[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36munion: set4c and set4d[0m finished, took 0.005 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36munion: set4c and set4d[0m finished, took 0.022 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36mdescending: set5[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31mdescending: set5[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.002 sec[0m
+[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31mdescending: set5[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.039 sec[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSet.descendingByRetweet(TweetSet.scala:79)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite$$anon$7.this([35mTweetSetSuite.scala[0m:[33m58[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite.descending: set5([35mTweetSetSuite.scala[0m:[33m57[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36mdescending: set5[0m finished, took 0.003 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36mdescending: set5[0m finished, took 0.042 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36munion: with empty set1[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31munion: with empty set1[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.002 sec[0m
+[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31munion: with empty set1[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.014 sec[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSet.union(TweetSet.scala:57)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite$$anon$5.this([35mTweetSetSuite.scala[0m:[33m48[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite.union: with empty set1([35mTweetSetSuite.scala[0m:[33m47[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36munion: with empty set1[0m finished, took 0.005 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36munion: with empty set1[0m finished, took 0.015 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36munion: with empty set2[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31munion: with empty set2[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.002 sec[0m
+[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31munion: with empty set2[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.008 sec[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSet.union(TweetSet.scala:57)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite$$anon$6.this([35mTweetSetSuite.scala[0m:[33m53[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite.union: with empty set2([35mTweetSetSuite.scala[0m:[33m52[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36munion: with empty set2[0m finished, took 0.004 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36munion: with empty set2[0m finished, took 0.011 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36mfilter: twenty on set5[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31mfilter: twenty on set5[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.005 sec[0m
+[0m[[0m[31merror[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[31mfilter: twenty on set5[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.047 sec[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
+[0m[[0m[31merror[0m] [0m[0m    at objsets.NonEmpty.filterAcc(TweetSet.scala:127)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSet.filter(TweetSet.scala:44)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite$$anon$3.this([35mTweetSetSuite.scala[0m:[33m38[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    at objsets.TweetSetSuite.filter: twenty on set5([35mTweetSetSuite.scala[0m:[33m37[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36mfilter: twenty on set5[0m finished, took 0.007 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m7 failed[0m[34m, [0m[34m0 ignored[0m[34m, 7 total, 0.28s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest objsets.[33mTweetSetSuite[0m.[36mfilter: twenty on set5[0m finished, took 0.049 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m7 failed[0m[34m, [0m[34m0 ignored[0m[34m, 7 total, 0.414s[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 7 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
 [0m[[0m[31merror[0m] [0m[0mFailed: Total 7, Failed 7, Errors 0, Passed 0[0m
