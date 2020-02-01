@@ -1,2 +1,13 @@
-[0m[[0m[0mdebug[0m] [0m[0mAcquiring lock on file /Users/david.rose/Documents/github/scala-course/objsets/project/target/.sbt-compilation-infos/objsets-compile/.sbt-idea-lock ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mReleasing lock on file /Users/david.rose/Documents/github/scala-course/objsets/project/target/.sbt-compilation-infos/objsets-compile/.sbt-idea-lock.[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/david.rose/Documents/github/scala-course/objsets/src/main/scala/objsets/TweetSet.scala:116:7: class Empty needs to be abstract.[0m
+[0m[[0m[31merror[0m] [0m[0mMissing implementations for 2 members. Stub implementations follow:[0m
+[0m[[0m[31merror[0m] [0m[0m  def isEmpty: Boolean = ???[0m
+[0m[[0m[31merror[0m] [0m[0m  def mostRetweeted: objsets.Tweet = ???[0m
+[0m[[0m[31merror[0m] [0m[0mclass Empty extends TweetSet {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/david.rose/Documents/github/scala-course/objsets/src/main/scala/objsets/TweetSet.scala:134:7: class NonEmpty needs to be abstract.[0m
+[0m[[0m[31merror[0m] [0m[0mMissing implementations for 2 members. Stub implementations follow:[0m
+[0m[[0m[31merror[0m] [0m[0m  def isEmpty: Boolean = ???[0m
+[0m[[0m[31merror[0m] [0m[0m  def mostRetweeted: objsets.Tweet = ???[0m
+[0m[[0m[31merror[0m] [0m[0mclass NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
