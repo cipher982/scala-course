@@ -1,13 +1,31 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/david.rose/Documents/github/scala-course/objsets/src/main/scala/objsets/TweetSet.scala:116:7: class Empty needs to be abstract.[0m
-[0m[[0m[31merror[0m] [0m[0mMissing implementations for 2 members. Stub implementations follow:[0m
-[0m[[0m[31merror[0m] [0m[0m  def isEmpty: Boolean = ???[0m
-[0m[[0m[31merror[0m] [0m[0m  def mostRetweeted: objsets.Tweet = ???[0m
-[0m[[0m[31merror[0m] [0m[0mclass Empty extends TweetSet {[0m
-[0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/david.rose/Documents/github/scala-course/objsets/src/main/scala/objsets/TweetSet.scala:134:7: class NonEmpty needs to be abstract.[0m
-[0m[[0m[31merror[0m] [0m[0mMissing implementations for 2 members. Stub implementations follow:[0m
-[0m[[0m[31merror[0m] [0m[0m  def isEmpty: Boolean = ???[0m
-[0m[[0m[31merror[0m] [0m[0m  def mostRetweeted: objsets.Tweet = ???[0m
-[0m[[0m[31merror[0m] [0m[0mclass NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {[0m
-[0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/david.rose/Documents/github/scala-course/objsets/src/main/scala/objsets/TweetSet.scala:125:38: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : objsets.NonEmpty[0m
+[0m[[0m[31merror[0m] [0m[0m required: objsets.TweetSet[0m
+[0m[[0m[31merror[0m] [0m[0m  def incl(tweet: Tweet): TweetSet = new NonEmpty(tweet, new Empty, new Empty)[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/david.rose/Documents/github/scala-course/objsets/src/main/scala/objsets/TweetSet.scala:163:29: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : objsets.NonEmpty[0m
+[0m[[0m[31merror[0m] [0m[0m required: objsets.TweetSet[0m
+[0m[[0m[31merror[0m] [0m[0m    if (x.text < elem.text) new NonEmpty(elem, left.incl(x), right)[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/david.rose/Documents/github/scala-course/objsets/src/main/scala/objsets/TweetSet.scala:164:34: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : objsets.NonEmpty[0m
+[0m[[0m[31merror[0m] [0m[0m required: objsets.TweetSet[0m
+[0m[[0m[31merror[0m] [0m[0m    else if (elem.text < x.text) new NonEmpty(elem, left, right.incl(x))[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/david.rose/Documents/github/scala-course/objsets/src/main/scala/objsets/TweetSet.scala:165:10: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : objsets.NonEmpty[0m
+[0m[[0m[31merror[0m] [0m[0m required: objsets.TweetSet[0m
+[0m[[0m[31merror[0m] [0m[0m    else this[0m
+[0m[[0m[31merror[0m] [0m[0m         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/david.rose/Documents/github/scala-course/objsets/src/main/scala/objsets/TweetSet.scala:169:30: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : objsets.NonEmpty[0m
+[0m[[0m[31merror[0m] [0m[0m required: objsets.TweetSet[0m
+[0m[[0m[31merror[0m] [0m[0m    if (tw.text < elem.text) new NonEmpty(elem, left.remove(tw), right)[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/david.rose/Documents/github/scala-course/objsets/src/main/scala/objsets/TweetSet.scala:170:35: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : objsets.NonEmpty[0m
+[0m[[0m[31merror[0m] [0m[0m required: objsets.TweetSet[0m
+[0m[[0m[31merror[0m] [0m[0m    else if (elem.text < tw.text) new NonEmpty(elem, left, right.remove(tw))[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m6 errors found[0m
