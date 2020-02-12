@@ -21,9 +21,17 @@ case class Leaf(char: Char, weight: Int) extends CodeTree
 trait Huffman extends HuffmanInterface {
 
   // Part 1: Basics
-  def weight(tree: CodeTree): Int = ??? // tree match ...
+  def weight(tree: CodeTree): Int = tree match {
+    case fork: Fork => fork.weight
+    case leaf: Leaf => leaf.weight
+    case _ => 0
+  }
 
-  def chars(tree: CodeTree): List[Char] = ??? // tree match ...
+  def chars(tree: CodeTree): List[Char] = tree match {
+    case fork: Fork => fork.chars
+    case leaf: Leaf => List(leaf.char)
+    case _ => List.empty
+  }
 
   def makeCodeTree(left: CodeTree, right: CodeTree) =
     Fork(left, right, chars(left) ::: chars(right), weight(left) + weight(right))
@@ -64,7 +72,24 @@ trait Huffman extends HuffmanInterface {
    *       println("integer is  : "+ theInt)
    *   }
    */
-  def times(chars: List[Char]): List[(Char, Int)] = ???
+  def times(chars: List[Char]): List[(Char, Int)] = {
+    def get(list: List[(Char, Int)], char: Char): (Char, Int) =
+      //if (list.isEmpty) null
+      if (list.head._1 == char) list.head
+      else get(list.tail, char)
+
+    def collect(list: List[Char], result: List[(Char, Int)]): List[(Char, Int)] = {
+      if (list.isEmpty) result
+      else {
+        val c = list.head
+        get(result, c) match {
+          case (theChar, theInt) => collect(list.tail, (c, theInt + 1) :: result.filterNot(p => p._1 == theChar))
+          case _ => collect(list.tail, (c, 1) :: result)
+        }
+      }
+    }
+    collect(chars, List.empty)
+  }
 
   /**
    * Returns a list of `Leaf` nodes for a given frequency table `freqs`.
@@ -73,12 +98,22 @@ trait Huffman extends HuffmanInterface {
    * head of the list should have the smallest weight), where the weight
    * of a leaf is the frequency of the character.
    */
-  def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = ???
+  def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = {
+
+    def order(input: List[(Char, Int)], result: List[Leaf]): List[Leaf] = {
+      if (input.isEmpty) result.sortWith(_.weight < _.weight)
+      else input.head match {
+        case (character, weight) => order(input.tail, Leaf(character, weight) :: result)
+      }
+    }
+
+    order(freqs, List.empty)
+  }
 
   /**
    * Checks whether the list `trees` contains only one single code tree.
    */
-  def singleton(trees: List[CodeTree]): Boolean = ???
+  def singleton(trees: List[CodeTree]): Boolean = trees.size == 1
 
   /**
    * The parameter `trees` of this function is a list of code trees ordered
@@ -92,7 +127,15 @@ trait Huffman extends HuffmanInterface {
    * If `trees` is a list of less than two elements, that list should be returned
    * unchanged.
    */
-  def combine(trees: List[CodeTree]): List[CodeTree] = ???
+  def combine(trees: List[CodeTree]): List[CodeTree] = {
+    if (trees.size < 2) trees
+    else {
+      val left = trees.head
+      val right = trees.tail.head
+      val tree = trees.tail.tail
+      new Fork(left, right, chars(left), weight(left)) :: tree
+    }
+  }
 
   /**
    * This function will be called in the following way:
